@@ -1,0 +1,1 @@
+{"name":"Bluetooth Audio Fix","description":"Prevents discord from enabling handsfree mode while in a call","authors":[{"name":"Narwhal","id":"455429792871874581"}],"main":"index.js","vendetta":{"icon":"speaker"},"hash":"13363b6b721bc372518f69bfecd6480ae6e90c9a5d05c30fad1489641647057e"}
