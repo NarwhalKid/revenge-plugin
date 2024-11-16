@@ -1,0 +1,14 @@
+{
+    "name": "Test",
+    "description": "Testing stuff!",
+    "authors": [
+        {
+        "name": "Narwhal",
+        "id": "455429792871874581"
+        }
+    ],
+    "main": "src/index.ts",
+    "vendetta": {
+        "icon": "ic_badge_staff"
+    }
+}
