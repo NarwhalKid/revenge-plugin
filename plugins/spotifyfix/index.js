@@ -1,16 +1,13 @@
-(function (context, patcher, metro, vendetta) {
-    "use strict";
-    
-    const { before } = patcher;
-    const { findByProps } = metro;
-    const SpotifyStore = findByProps("dispatch");
-    const { logger } = vendetta;
+import { findByProps } from "@vendetta/metro";
+import { logger } from "@vendetta";
+import { before } from "@vendetta/patcher";
 
-    let unpatch; // Variable to hold the unpatch function
+const SpotifyStore = findByProps("dispatch")
+let unpatch
 
-    console.log('hi!')
-    logger.log("Hi!");
-    const patch = () => {
+export default {
+
+    onLoad: () => {
         console.log('hey!')
         logger.log("Hey!");
         unpatch = before("dispatch", SpotifyStore, ([action]) => {
@@ -23,18 +20,14 @@
                 action.payload.isPremium = true; // Force premium
             }
         });
-    };
-
-    // Called when the plugin is loaded
-    context.onLoad = patch;
+    },
 
     // Called when the plugin is unloaded
-    context.onUnload = () => {
+    onUnload: () => {
         if (typeof unpatch === "function") {
             unpatch(); // Unpatch the modification
             console.log('unpatched!')
             logger.log("Unpatched successfully!");
         }
-    };
-
-})(vendetta.context, vendetta.patcher, vendetta.metro, vendetta);
+    },
+}
