@@ -1,1 +1,0 @@
-{"name":"Spotify Fix","description":"Prevents discord from pausing Spotify while in a call, fork of vencord plugin.","authors":[{"name":"Narwhal","id":"455429792871874581"}],"main":"index.js","vendetta":{"icon":"speaker"},"hash":"27b96bc3e88e3e57d0a0e25ccd78b6811bb2a06d7ad3325ba09c8e47467321d5"}
