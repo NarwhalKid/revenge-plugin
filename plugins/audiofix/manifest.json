@@ -1,6 +1,6 @@
 {
   "name": "Bluetooth Audio Fix",
-  "description": "Prevents discord from enabling handsfree mode while in a call",
+  "description": "Prevents Discord from enabling handsfree mode while in a call",
   "authors": [
     {
       "name": "Narwhal",

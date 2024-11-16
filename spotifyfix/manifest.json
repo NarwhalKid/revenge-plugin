@@ -1,1 +1,1 @@
-{"name":"Spotify Fix","description":"Prevents discord from pausing Spotify while in a call","authors":[{"name":"Narwhal","id":"455429792871874581"}],"main":"index.js","vendetta":{"icon":"speaker"},"hash":"ff0d4b84d7746b711704fd1bdae65761036e8d0e44be0db4a206ca4aadd0bc77"}
+{"name":"Spotify Fix","description":"Prevents Discord from pausing Spotify while in a call","authors":[{"name":"Narwhal","id":"455429792871874581"}],"main":"index.js","vendetta":{"icon":"speaker"},"hash":"ff0d4b84d7746b711704fd1bdae65761036e8d0e44be0db4a206ca4aadd0bc77"}

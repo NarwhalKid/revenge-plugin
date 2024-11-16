@@ -1,6 +1,6 @@
 {
   "name": "Spotify Fix",
-  "description": "Prevents discord from pausing Spotify while in a call",
+  "description": "Prevents Discord from pausing Spotify while in a call",
   "authors": [
     {
       "name": "Narwhal",
