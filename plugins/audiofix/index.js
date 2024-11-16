@@ -1,22 +1,4 @@
-(function (context, patcher, metro) {
-    "use strict";
-// import { findByProps } from '@vendetta/metro';
-const { findByProps } = metro;
+import { ReactNative as RN } from "@vendetta/metro/common";
+import { instead } from "@vendetta/patcher";
 
-    const patch = () => {
-        if (findByProps("setCommunicationModeOn").setCommunicationModeOn) {
-            findByProps("setCommunicationModeOn").setCommunicationModeOnBackup = findByProps("setCommunicationModeOn").setCommunicationModeOn;
-            findByProps("setCommunicationModeOn").setCommunicationModeOn = () => {};
-        }
-    }
-
-    const unpatch = () => {
-        if (findByProps("setCommunicationModeOn").setCommunicationModeOn) {
-            findByProps("setCommunicationModeOn").setCommunicationModeOn = findByProps("setCommunicationModeOn").setCommunicationModeOnBackup;
-        }
-    }
-
-    context.onUnload = unpatch;
-    context.onLoad = patch;
-
-})({}, vendetta.patcher, vendetta.metro);
+export const onUnload = instead("setCommunicationModeOn", RN.NativeModules.VoiceEngine === null ? RN.NativeModules.RTNAudioManager : RN.NativeModules.VoiceEngine, () => {});

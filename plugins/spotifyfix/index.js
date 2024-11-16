@@ -8,8 +8,11 @@
 
     let unpatch; // Variable to hold the unpatch function
 
+    logger.log("Hi!");
     const patch = () => {
+        logger.log("hey!");
         unpatch = before("dispatch", SpotifyStore, ([action]) => {
+            logger.log(JSON.stringify(action));
             if (
                 action.type === "SPOTIFY_PROFILE_UPDATE" &&
                 action.payload?.isPremium === undefined
